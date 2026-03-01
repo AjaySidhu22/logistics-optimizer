@@ -1,0 +1,5 @@
+# E:\logistics-optimizer\.gitignore
+
+node_modules/
+.env
+dist/

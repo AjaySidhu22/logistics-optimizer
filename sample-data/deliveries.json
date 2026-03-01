@@ -1,0 +1,130 @@
+{
+  "vehicles": [
+    {
+      "name": "Truck 01",
+      "plateNumber": "DL-01-AB-1234",
+      "capacity": 1000,
+      "driverName": "Ramesh Kumar",
+      "speed": 40,
+      "currentLocation": {
+        "lat": 28.6139,
+        "lng": 77.2090
+      },
+      "status": "available"
+    },
+    {
+      "name": "Truck 02",
+      "plateNumber": "MH-02-CD-5678",
+      "capacity": 800,
+      "driverName": "Suresh Patel",
+      "speed": 45,
+      "currentLocation": {
+        "lat": 19.0760,
+        "lng": 72.8777
+      },
+      "status": "available"
+    }
+  ],
+  "deliveries": [
+    {
+      "customerName": "Amit Sharma",
+      "address": "Connaught Place, New Delhi",
+      "coordinates": { "lat": 28.6315, "lng": 77.2167 },
+      "priority": "high",
+      "packageWeight": 5,
+      "timeWindow": { "start": "09:00", "end": "12:00" },
+      "status": "pending",
+      "notes": "Fragile items - handle with care"
+    },
+    {
+      "customerName": "Priya Singh",
+      "address": "Lajpat Nagar, New Delhi",
+      "coordinates": { "lat": 28.5672, "lng": 77.2430 },
+      "priority": "high",
+      "packageWeight": 3,
+      "timeWindow": { "start": "10:00", "end": "13:00" },
+      "status": "pending",
+      "notes": "Call before delivery"
+    },
+    {
+      "customerName": "Rajesh Verma",
+      "address": "Dwarka Sector 12, New Delhi",
+      "coordinates": { "lat": 28.5921, "lng": 77.0460 },
+      "priority": "medium",
+      "packageWeight": 8,
+      "timeWindow": { "start": "11:00", "end": "15:00" },
+      "status": "pending",
+      "notes": ""
+    },
+    {
+      "customerName": "Sunita Devi",
+      "address": "Rohini Sector 3, New Delhi",
+      "coordinates": { "lat": 28.7196, "lng": 77.1202 },
+      "priority": "medium",
+      "packageWeight": 2,
+      "timeWindow": { "start": "09:00", "end": "17:00" },
+      "status": "pending",
+      "notes": "Leave at door if not home"
+    },
+    {
+      "customerName": "Vikram Malhotra",
+      "address": "Noida Sector 18, Uttar Pradesh",
+      "coordinates": { "lat": 28.5709, "lng": 77.3220 },
+      "priority": "medium",
+      "packageWeight": 12,
+      "timeWindow": { "start": "13:00", "end": "18:00" },
+      "status": "pending",
+      "notes": "Heavy package - bring assistance"
+    },
+    {
+      "customerName": "Kavita Joshi",
+      "address": "Gurgaon Sector 29, Haryana",
+      "coordinates": { "lat": 28.4595, "lng": 77.0266 },
+      "priority": "low",
+      "packageWeight": 1,
+      "timeWindow": { "start": "09:00", "end": "17:00" },
+      "status": "pending",
+      "notes": ""
+    },
+    {
+      "customerName": "Mohan Das",
+      "address": "Faridabad Sector 15, Haryana",
+      "coordinates": { "lat": 28.4089, "lng": 77.3178 },
+      "priority": "low",
+      "packageWeight": 4,
+      "timeWindow": { "start": "10:00", "end": "16:00" },
+      "status": "pending",
+      "notes": ""
+    },
+    {
+      "customerName": "Anita Gupta",
+      "address": "Vasundhara, Ghaziabad",
+      "coordinates": { "lat": 28.6457, "lng": 77.3738 },
+      "priority": "high",
+      "packageWeight": 6,
+      "timeWindow": { "start": "09:00", "end": "11:00" },
+      "status": "pending",
+      "notes": "Urgent delivery"
+    },
+    {
+      "customerName": "Sanjay Tiwari",
+      "address": "Greater Noida West, Uttar Pradesh",
+      "coordinates": { "lat": 28.5938, "lng": 77.4241 },
+      "priority": "medium",
+      "packageWeight": 7,
+      "timeWindow": { "start": "12:00", "end": "17:00" },
+      "status": "pending",
+      "notes": ""
+    },
+    {
+      "customerName": "Pooja Agarwal",
+      "address": "Indirapuram, Ghaziabad",
+      "coordinates": { "lat": 28.6411, "lng": 77.3687 },
+      "priority": "low",
+      "packageWeight": 3,
+      "timeWindow": { "start": "09:00", "end": "17:00" },
+      "status": "pending",
+      "notes": "Weekend delivery preferred"
+    }
+  ]
+}
