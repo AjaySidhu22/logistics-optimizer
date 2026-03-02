@@ -79,6 +79,17 @@ function App() {
     }
   };
 
+  const handleDeleteVehicle = async (id) => {
+    try {
+      await api.delete(`/vehicles/${id}`);
+      setVehicles((prev) => prev.filter((v) => v._id !== id));
+      if (selectedVehicle?._id === id) setSelectedVehicle(null);
+      toast.success("Vehicle removed");
+    } catch (err) {
+      toast.error("Failed to delete vehicle");
+    }
+  };
+
   const handleOptimizeRoute = async () => {
     if (!selectedVehicle) {
       toast.warning("Please select a vehicle first");
@@ -144,6 +155,7 @@ function App() {
           onDeleteDelivery={handleDeleteDelivery}
           onClearAll={handleClearAll}
           onAddVehicle={handleAddVehicle}
+          onDeleteVehicle={handleDeleteVehicle}
           onOptimize={handleOptimizeRoute}
           isOptimizing={isOptimizing}
           loading={loading}

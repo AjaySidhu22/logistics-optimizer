@@ -11,10 +11,11 @@ export default function Sidebar({
   onDeleteDelivery,
   onClearAll,
   onAddVehicle,
+  onDeleteVehicle,
   onOptimize,
   isOptimizing,
   loading,
-}) {
+}){
   const [activeTab, setActiveTab] = useState("deliveries");
   const [showAddDelivery, setShowAddDelivery] = useState(false);
   const [showAddVehicle, setShowAddVehicle] = useState(false);
@@ -266,32 +267,43 @@ export default function Sidebar({
             ) : (
               vehicles.map((vehicle) => (
                 <div
-                  key={vehicle._id}
-                  className={`vehicle-item ${selectedVehicle?._id === vehicle._id ? "selected" : ""}`}
-                  onClick={() => onSelectVehicle(vehicle)}
-                >
-                  <div className="vehicle-name">
-                    🚚 {vehicle.name}
-                    {selectedVehicle?._id === vehicle._id && (
-                      <span
-                        style={{
-                          fontSize: "10px",
-                          color: "#3b82f6",
-                          marginLeft: "6px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        SELECTED
-                      </span>
-                    )}
-                  </div>
-                  <div className="vehicle-details">
-                    Plate: {vehicle.plateNumber} · Speed: {vehicle.speed} km/h
-                  </div>
-                  <div className="vehicle-details">
-                    Driver: {vehicle.driverName || "N/A"} · Capacity: {vehicle.capacity} kg
-                  </div>
-                </div>
+  key={vehicle._id}
+  className={`vehicle-item ${selectedVehicle?._id === vehicle._id ? "selected" : ""}`}
+  onClick={() => onSelectVehicle(vehicle)}
+>
+  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+    <div className="vehicle-name">
+      🚚 {vehicle.name}
+      {selectedVehicle?._id === vehicle._id && (
+        <span
+          style={{
+            fontSize: "10px",
+            color: "#3b82f6",
+            marginLeft: "6px",
+            fontWeight: "600",
+          }}
+        >
+          SELECTED
+        </span>
+      )}
+    </div>
+    <button
+      className="btn-danger"
+      onClick={(e) => {
+        e.stopPropagation();
+        onDeleteVehicle(vehicle._id);
+      }}
+    >
+      ✕
+    </button>
+  </div>
+  <div className="vehicle-details">
+    Plate: {vehicle.plateNumber} · Speed: {vehicle.speed} km/h
+  </div>
+  <div className="vehicle-details">
+    Driver: {vehicle.driverName || "N/A"} · Capacity: {vehicle.capacity} kg
+  </div>
+</div> 
               ))
             )}
 
